@@ -5,11 +5,11 @@ int	ft_character(const char *str)
 	int i;
 
 	i = 0;
-	while((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 int	ft_atoi(const char *nptr)
@@ -25,7 +25,10 @@ int	ft_atoi(const char *nptr)
 		a = -1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
-	while(nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <='9')
-		nb = nb *10 + nptr[i] - '0';
-	return(nb * a);
+	while (nptr[i] >= '0' && nptr[i] <='9')
+	{
+		nb = nb * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (nb * a);
 }
